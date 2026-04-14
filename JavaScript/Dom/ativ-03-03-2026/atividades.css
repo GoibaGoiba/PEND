@@ -1,0 +1,20 @@
+.esconder {
+    display: none;
+}
+
+input {
+    width: 300px;
+    height: 20px;
+}
+
+.erro {
+    color: red;
+}
+
+.valido {
+    color: green;
+}
+
+.aceitavel {
+    color: orange;
+}

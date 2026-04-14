@@ -1,0 +1,106 @@
+:root {
+    --primary: #001aff;
+    --secondary: #62a6ff;
+    --bg-light: #d3deff;
+    --input-bg: #94c2ff;
+    --white: #f8fafc;
+    --error: #e11d48;
+    --success: #10b981;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    /* Para alinhar header e form */
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #0f172a;
+    /* Azul marinho muito escuro em vez de preto puro */
+    padding: 20px;
+}
+
+header {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+header img {
+    width: 120px;
+    height: auto;
+    filter: drop-shadow(0 0 8px var(--secondary));
+}
+
+.box {
+    background-color: var(--bg-light);
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid var(--primary);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    /* Controla o espaçamento sem precisar de <br> */
+}
+
+.input-group {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+input {
+    width: 100%;
+    height: 48px;
+    border: 2px solid var(--secondary);
+    outline: 0;
+    font-size: 15px;
+    padding: 0 45px 0 15px;
+    border-radius: 10px;
+    background-color: var(--input-bg);
+    color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(0, 26, 255, 0.1);
+}
+
+input::placeholder {
+    color: rgba(0, 26, 255, 0.6);
+}
+
+
+/* Ícones dentro dos inputs */
+
+.icone,
+.iconeOlho1,
+.iconeOlho2,
+.excluir {
+    position: absolute;
+    right: 15px;
+    top: 24px;
+    /* Centralizado em relação ao input de 48px */
+    transform: translateY(-50%);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.erro {
+    color: red;
+}
+
+.valido {
+    color: green;
+}

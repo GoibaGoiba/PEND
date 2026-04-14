@@ -1,0 +1,10 @@
+body {
+    background-image: url(https://i.pinimg.com/736x/75/6d/82/756d82fd64326c6721ea6850bc057384.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+
+    /* Tente ajustar a porcentagem horizontal para manter o gato visível */
+    /* 80% move a imagem para a esquerda, mantendo o lado direito mais visível */
+    background-position: 90% center; 
+}
