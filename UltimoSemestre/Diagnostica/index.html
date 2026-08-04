@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header>
+        <div id="menu">
+            <img src="assets/Logo.png" alt="Logo do site" class="logo">
+            <h1>Meu Site</h1>
+            <nav>
+                <ul>
+                    <li><a href="#inicio">Ínicio</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#encerramento">Encerramento</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section id="inicio">
+        <div id="introducao"></div>
+        <h2>Bem-vindo ao meu site!</h2>
+        <p>Este site é uma avaliação diagnóstica, nele você vai conhecer um pouco mais sobre mim como um aluno e
+            como um
+            possível futuro programador!</p>
+        <p>Espero que esse site seja o suficiente para que você possa conhecer um pouco mais sobre mim e sobre
+            minhas
+            habilidades!</p>
+        </div>
+    </section>
+    <section id="sobre">
+        <div id="sobre-mim">
+            <h2>Quem sou eu?</h2>
+            <p>Oi! Me chamo Enzzo, atualmente estou cursando o meu último ano do ensino médio e estou também em meu
+                último ano no meu curso de desenvolvimento de sistema pelo senai.</p>
+            <p>Bem, como dito acima, estou em um momento bem corrido da minha trajetória escolar e apesar de tudo,
+                gostei muito de poder ter todas as oportunidades que eu tive até esse momento. Não tenho muito o costume
+                de falar esse tipo de coisa, mas do coração mesmo, seja quem for que estiver lendo isso, aproveite muito
+                aquilo que está ao seu redor! Perdi muitas oportunidades nesses anos por me fechar muito ou ser muito
+                ansioso, por isso digo pra você aproveitar bastante!</p>
+            <p>Sejamos honestos, ninguém gosta muito desse papinho sentimental assim tão cedo né? Quem levaria um site a
+                sério se ele fosse apenas um diário digital? Por isso, gostaria muito de poder falar um pouco sobre mim
+                para que você possa me conhecer e aí assim, poder trocar ideias!</p>
+        </div>
+        <div id="minha-historia">
+            <h2>Minha história</h2>
+            <p>Como já disse anteriormente, me chamo Enzzo, tenho 17 anos e moro em Mococa-SP. Uma cidadezinha bem
+                quieta e
+                pequena do interior, mas vou te falar! Como eu amo ela! Tenho muitas memórias boas aqui, passeando com
+                amigos, aproveitando festas no centro da cidade com minha família. Não me arrependo nenhum pouco de amar
+                tanto essa cidadezinha ❤️ </p>
+            <p>Acho que pelo fato de eu estar cursando DS, creio que você já pode tirar algumas conclusões de +/- o que
+                eu
+                gosto né? Devo admitir, sou um grande nerd, gosto muito de jogos, séries, desenhos, ler livros, mangás,
+                animes (mesmo que eu só tenha assistido poucos). Uma das séries de filmes que eu mais gosto de todas
+                definitivamente tem que ir para os filmes da Marvel e do Jurassic Park! Desde que pequeno sempre adorei
+                ver
+                eles.</p>
+            <p>Sou um cara até que bem tranquilo, claro, como ninguém é santo, tenho meus problemas e tals, mas no
+                geral? Me
+                considero uma pessoa tranquila de se estar próximo. Tipo, se você puxar papo comigo, muito provavelmente
+                eu
+                vou ficar conversando com você por horas e horas, gosto muito de conversar com os outros, por mais que
+                eu
+                não comece muitas conversas!</p>
+            <p>Alguns dos meus jogos favoritos são por exemplo, Terraria, Minecraft, Team Fortress 2, Helldivers 2,
+                entre
+                varios outros! Mas no geral, um jogo com um amigo fica muito melhor do que sozinho. Por isso prefiro
+                muito
+                mais jogos online ou que posso jogar com outros do que jogos solo.</p>
+            <p>Bem... Acho que não tem muito mais o que falar sobre mim né? Espero que essa breve descrição de mim mesmo
+                seja suficiente para que você possa me conhecer melhor! Foi muito divertido poder compartilhar um pouco
+                da
+                minha história e minhas experiências com você!</p>
+        </div>
+    </section>
+    <section id="encerramento">
+        <h2>E aí?</h2>
+        <p>Caso você queira bater um papo ou só falar sobre o site, sobre qualquer coisa no geral! Só me chamar que eu
+            apareço viu! Vou deixar alguns links para você entrar em contato comigo aqui em baixo!</p>
+        <h2>Meus contatos e links:</h2>
+        <div id="contato">
+            <div id="formulario">
+                <p>Sei que é bem inconveniente, mas... Preciso fazer isso para ter mais segurança e garantir que nenhum
+                    troll vai ficar fazendo spam nos meus contatos... É só um cadastro bem rapidinho e aí, pronto! Já
+                    vai poder entrar em contato comigo!</p>
+
+                <input type="text" id="nome" placeholder="Digite seu nome: ">
+                <p id="confirmarNome" class="erro"></p>
+
+                <input type="text" id="email" placeholder="Digite seu email: ">
+                <p id="confirmarEmail" class="erro"></p>
+
+                <div id="grupo-senha">
+                    <input type="password" id="senha" placeholder="Digite sua senha: "><i class="bi bi-eye-fill icones"
+                        id="iconeSenha"></i>
+                    <p id="erroSenha"></p>
+                </div>
+
+                <div id="checklistSenha">
+                    <p id="numRequerido">Pelo menos 8 caracteres</p>
+                    <p id="letraMaiusMinus">Pelo menos uma letra maiúscula e uma letra minúscula</p>
+                    <p id="caracterEspecial">Pelo menos um caractere especial</p>
+                    <p id="temNum">Pelo menos um número</p>
+                </div>
+
+                <div id="grupo-conf-senha">
+                    <input type="password" id="confirmarSenha" placeholder="Confirme sua senha: "><i
+                        class="bi bi-eye-fill icones" id="iconeConfSenha"></i>
+                    <p id="erroConfSenha"></p>
+                </div>
+                <i class="bi bi-arrow-right-square-fill icones" id="confirmacao"></i>
+
+                <p id="mensagem"></p>
+            </div>
+            <div id="links">
+                <ul>
+                    <li><a href="https://github.com/GoibaGoiba" target="_blank" class="link">GitHub</a> <i
+                            class="bi bi-github icones"></i>
+                    </li>
+                    <li>
+                        <p>enzzocossolinogmail.com</p> <i class="bi bi-envelope-at-fill icones"></i>
+                    </li>
+                    <li>
+                        <p>+55 19 99299-9093</p> <i class="bi bi-telephone-inbound-fill icones"></i>
+                    </li>
+                    <li><img src="assets/pokeball.png" alt="Pokeball" class="bubble"></li>
+                    <li><a href="https://steamcommunity.com/profiles/76561199043686694/" class="link"
+                            target="_blank">Steam</a> <i class="bi bi-steam icones"></i>
+                    </li>
+                    <li><img src="assets/aggron.png" alt="Aggron" class="bubble"></li>
+
+                </ul>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <P> Ei! Psiu! Acho que esqueci de falar antes! Sou um grande fã de cavaleiros e pokémon!</P>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
