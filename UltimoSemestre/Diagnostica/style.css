@@ -320,48 +320,64 @@ input:focus {
 }
 
 /* =========================================
-   CONTATOS (LINKS)
+   CONTATOS (MANTER 3 COLUNAS)
    ========================================= */
-#links {
-    display: none;
-    /* Controlado pelo JS */
-    margin-top: 30px;
-    text-decoration: none;
-}
-
 #links ul {
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-    text-decoration: none;
+    /* Forçamos 3 colunas no desktop para manter a Pokebola e o Aggron nos cantos */
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px; /* Reduzi um pouco o espaço entre as caixas */
+    margin-top: 20px;
 }
 
 #links li {
     background: var(--branco-gelo);
-    padding: 20px;
+    padding: 15px 10px; /* Padding menor nas laterais */
     border: 1px solid var(--bege-borda);
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
+    gap: 8px;
     transition: 0.3s;
+    min-height: 70px;
+}
+
+/* Ajuste específico para o E-mail caber na caixa central */
+#links li p, #links li a {
+    font-size: 0.85rem; /* Diminuímos a fonte para o texto longo caber */
+    margin-bottom: 0 !important;
+    white-space: nowrap; /* Impede que o e-mail quebre em duas linhas */
+}
+
+/* Garante que os ícones não sumam */
+#links li i {
+    flex-shrink: 0;
+    font-size: 1.2rem;
+}
+
+/* Responsividade: No celular, vira 1 coluna só para não ficar tudo esmagado */
+@media (max-width: 700px) {
+    #links ul {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Garante que o texto do telefone herde todas as fontes e cores do tema */
+#links li p, #links li span {
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; /* A mesma do seu body */
+    color: var(--texto-tinta); /* Herda a cor do LI (marrom ou branco no hover) */
+    font-weight: bold; /* Deixa com o mesmo peso dos links */
+    font-size: 0.85rem; /* O mesmo tamanho que definimos para o e-mail */
+    margin-bottom: 0 !important;
+}
+
+/* Caso o navegador tenha criado um link automático para o número */
+#links li a[href^="tel"], #links li a {
     text-decoration: none;
-    color: var(--marrom-pastel);
-    text-decoration: none;
+    color: var(--texto-tinta);
+    font-family: inherit;
     font-weight: bold;
-}
-
-#links li:hover {
-    background: var(--marrom-pastel);
-    color: white;
-    text-decoration: none;
-}
-
-#links li:hover a,
-#links li:hover i {
-    color: white;
-    text-decoration: none;
 }
 
 /* Estilo para as imagens decorativas nos contatos */
