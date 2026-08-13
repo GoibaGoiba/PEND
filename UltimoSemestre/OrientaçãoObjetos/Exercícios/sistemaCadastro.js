@@ -13,12 +13,16 @@ class Estoque {
 
     return precoDesconto;
   }
+  excluirProduto(indice) {
+    this.produtos.splice(indice, 1);
+    this.exibirNaTela();
+  }
 
   exibirNaTela(produto) {
     const resultadoProduto = document.querySelector("#resultadoProduto");
 
     resultadoProduto.innerHTML = "";
-    this.produtos.forEach((produto) => {
+    this.produtos.forEach((produto, indice) => {
       resultadoProduto.innerHTML += `
         <div>
             <p>Nome: ${produto.nome}</p>
@@ -26,7 +30,16 @@ class Estoque {
             <p>Categoria: ${produto.categoria}</p>
             <p>Desconto: ${produto.desconto}%</p>
             <p>Preço com desconto: R$ ${this.aplicarDesconto(produto).toFixed(2)}</p>
+            <button class="excluirProduto" data-indice="${indice}">[Excluir]</button>
         </div>`;
+    });
+    const botoes = resultadoProduto.querySelectorAll(".excluirProduto");
+
+    botoes.forEach((botao) => {
+      botao.addEventListener("click", () => {
+        const indice = Number(botao.dataset.indice);
+        this.excluirProduto(indice);
+      });
     });
   }
 }
