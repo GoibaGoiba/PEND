@@ -1,0 +1,52 @@
+.jogo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#espacoJogo{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px 20px;
+    max-width: 700px;
+}
+
+.espaco{
+    background-color: yellow;
+    height: 175px;
+    width: 175px;
+}
+
+#pecasX{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px 20px;
+    max-width: 400px;
+    font-size: 90px;
+}
+
+.pecaX{
+    display: flex;
+    background-color: red;
+    height: 175px;
+    width: 175px;
+    justify-content: center;
+    text-align: center;
+}
+
+#pecasO{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px 20px;
+    max-width: 400px;
+    font-size: 90px;
+}
+
+.pecaO{
+    background-color: blue;
+    height: 175px;
+    width: 175px;
+    text-align: center;
+}

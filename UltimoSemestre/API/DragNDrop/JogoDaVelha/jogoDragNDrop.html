@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="jogo.css">
+    <title>Jogo da Velha - Drag & Drop</title>
+</head>
+
+<body>
+    <main class="container">
+        <header class="cabecalho">
+            <p class="subtitulo">Desafio de arrastar e soltar</p>
+            <h1>Jogo da Velha</h1>
+            <p id="mensagem" class="mensagem">Vez do X: arraste uma peça X para o tabuleiro.</p>
+
+            <div class="controles">
+                <div class="timer-box">
+                    <span class="timer-label">Tempo</span>
+                    <span id="timer">00:00</span>
+                </div>
+                <button id="resetar" type="button">Reiniciar jogo</button>
+            </div>
+        </header>
+
+        <div class="jogo">
+            <section id="pecasX" class="banco banco-x" aria-label="Peças X">
+                <h2>Peças X</h2>
+                <div class="lista-pecas">
+                    <div class="pecaX" id="pecaX1" draggable="true">✖️</div>
+                    <div class="pecaX" id="pecaX2" draggable="true">✖️</div>
+                    <div class="pecaX" id="pecaX3" draggable="true">✖️</div>
+                    <div class="pecaX" id="pecaX4" draggable="true">✖️</div>
+                    <div class="pecaX" id="pecaX5" draggable="true">✖️</div>
+                    <div class="pecaX" id="pecaX6" draggable="true">✖️</div>
+                </div>
+            </section>
+
+            <section id="espacoJogo" aria-label="Tabuleiro do jogo da velha">
+                <div class="espaco" id="espaco1"></div>
+                <div class="espaco" id="espaco2"></div>
+                <div class="espaco" id="espaco3"></div>
+                <div class="espaco" id="espaco4"></div>
+                <div class="espaco" id="espaco5"></div>
+                <div class="espaco" id="espaco6"></div>
+                <div class="espaco" id="espaco7"></div>
+                <div class="espaco" id="espaco8"></div>
+                <div class="espaco" id="espaco9"></div>
+            </section>
+
+            <section id="pecasO" class="banco banco-o" aria-label="Peças O">
+                <h2>Peças O</h2>
+                <div class="lista-pecas">
+                    <div class="pecaO" id="pecaO1" draggable="true">⭕</div>
+                    <div class="pecaO" id="pecaO2" draggable="true">⭕</div>
+                    <div class="pecaO" id="pecaO3" draggable="true">⭕</div>
+                    <div class="pecaO" id="pecaO4" draggable="true">⭕</div>
+                    <div class="pecaO" id="pecaO5" draggable="true">⭕</div>
+                    <div class="pecaO" id="pecaO6" draggable="true">⭕</div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="jogo.js"></script>
+</body>
+
+</html>
