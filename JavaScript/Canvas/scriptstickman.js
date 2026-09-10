@@ -1,7 +1,7 @@
 const canvas = document.getElementById('canvas');
 const contexto = canvas.getContext('2d');
 
-contexto.lineWidth = 6;
+contexto.lineWidth = 7;
 contexto.lineCap = 'round';
 contexto.lineJoin = 'round';
 
