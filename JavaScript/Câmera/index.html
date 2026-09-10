@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade Prática - Registro de Ponto</title>
+    <link rel="stylesheet" href="teste.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="containerForm">
+        <header class="header">
+            <h1>
+                Registro de Ponto
+            </h1>
+        </header>
+        <div class="localizaDados">
+            <h2>
+                Localização
+            </h2>
+            <div class="containerInfos">
+                <div class="card">
+                    <i class="icon bi bi-geo-alt-fill"></i>
+                    <h3 id="lati">Latitude: Carregando...
+
+                    </h3>
+                </div>
+                <div class="card">
+                    <i class="icon bi bi-pin-map-fill"></i>
+                    <h3 id="longi">Longitude: Carregando...</h3>
+                </div>
+                <div class="card">
+                    <i id="mira" class="icon bi bi-crosshair2"></i>
+                    <h3 id="precis">Precisão: Carregando...</h3>
+                </div>
+            </div>
+        </div>
+        <div class="containerCamera">
+            <h2>Camêra</h2>
+            <video id="camera" autoplay playinline></video>
+            <canvas id="canvas" style="display: none;"></canvas>
+            <img id="foto">
+        </div>
+
+        <div class="containerBotao">
+            <button class="botao" id="ligarLocal">
+                Mostrar Localização
+            </button>
+
+            <button class="botao" id="registrarPonto" >
+                Registrar Ponto
+            </button>
+
+            <button class="botao" id="ligarCam">
+                Ligar Câmera
+            </button>
+
+
+        </div>
+
+
+    </div>
+
+
+
+
+    <script src="teste.js"></script>
+</body>
+
+</html>

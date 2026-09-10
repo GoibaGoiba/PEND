@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(227, 226, 226);
+    font-family: "Montserrat", sans-serif;
+    height: 115vh;
+}
+
+.containerForm {
+    border: none;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    margin-left: 10vw;
+    justify-content: flex-start;
+    /* era center */
+    margin-top: 3vh;
+    padding-top: 0;
+    padding-bottom: 3vh;
+    /* pra dar um respiro embaixo já que tirou a altura fixa */
+    border-radius: 20px;
+    background-color: white;
+    overflow: hidden;
+    /* mantém os cantos arredondados cortando o header */
+    /* remove o height: 110vh */
+}
+
+.localizaDados {
+    margin-top: 2vh;
+}
+
+.containerInfos {
+    display: flex;
+    flex-direction: row;
+    gap: 10vw;
+    margin-top: 3vh;
+}
+
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+.icon {
+    font-size: 1.3rem;
+    background-color: rgb(102, 237, 102);
+    color: white;
+    padding: 2%;
+    border-radius: 5px;
+}
+
+#mira {
+    padding: 4%;
+}
+
+.containerCamera {
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#camera, #foto {
+    width: 35vw;
+    border-radius: 10px;
+    margin-top: 2vh;
+}
+
+.botao {
+    padding: 2%;
+    font-weight: bold;
+    width: 15vw;
+    font-size: 1.2rem;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.containerBotao {
+    display: flex;
+    margin-top: 3%;
+    gap: 10vw;
+}
+
+#ligarLocal {
+    background-color: rgb(230, 168, 75);
+    color: white;
+    transition: 0.5s ease;
+}
+
+#ligarCam {
+    background-color: rgb(71, 71, 199);
+    color: white;
+    transition: 0.5s ease;
+}
+
+#ligarLocal:hover {
+    transition: 0.5s ease;
+    background-color: rgb(197, 135, 42);
+    transform: scale(1.1);
+}
+
+#ligarCam:hover {
+    transition: 0.5s ease;
+    background-color: rgb(36, 36, 147);
+    transform: scale(1.1);
+}
+
+.header {
+    background-color: rgb(96, 96, 215);
+    width: 100%;
+    padding: 2vh 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+#registrarPonto {
+    background-color: rgb(76, 187, 76);
+    color: white;
+    transition: 0.5s ease;
+    /* margin-top: 3vh; */
+    /* margin-bottom: 3vh; */
+}
+
+#registrarPonto:hover {
+    transition: 0.5s ease;
+    background-color: rgb(56, 150, 56);
+    transform: scale(1.1);
+}
