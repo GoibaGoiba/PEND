@@ -1,0 +1,568 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    font-family: "Libre Baskerville", serif;
+    color: #fff;
+    min-height: 100vh;
+    line-height: 1.7;
+}
+
+header {
+    background: rgba(190, 0, 0, 0.98);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.container-header {
+    width: min(1180px, 100%);
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.container-header a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    transition: color 0.25s ease;
+}
+
+.container-header a:hover {
+    color: #b6ff9e;
+}
+
+.inicio {
+    background: rgba(190, 0, 0, 0.98);
+    display: flex;
+    justify-content: center;
+    padding: 80px 20px 60px;
+}
+
+.boas-vindas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1180px;
+    margin: 0 auto;
+}
+
+.texto-inicio {
+    width: min(520px, 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    text-align: left;
+}
+
+.texto-inicio h1 {
+    font-size: clamp(2.8rem, 6vw, 4.4rem);
+    line-height: 1.02;
+    margin: 0;
+}
+
+.texto-inicio p {
+    font-size: clamp(1rem, 1.5vw, 1.15rem);
+    max-width: 36rem;
+    margin: 0;
+}
+
+.contato-botao.meio {
+    justify-content: flex-start;
+}
+
+.imagem-inicio {
+    width: min(540px, 100%);
+    display: flex;
+    justify-content: center;
+}
+
+.imagem-inicio img,
+.foto-inicio {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+}
+
+.contato-botao {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.botao-whatsapp {
+    background-color: green;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.foto-inicio {
+    width: 100%;
+    height: auto;
+    margin-top: 0;
+}
+
+.sobre-nos {
+    background-color: #333;
+    padding: 60px 20px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.sobre-nos .historia {
+    width: min(100%, 1080px);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.sobre-nos .historia-texto {
+    flex: 1 1 420px;
+    min-width: 280px;
+    max-width: 560px;
+    text-align: left;
+}
+
+.sobre-nos .historia-texto h2 {
+    font-size: clamp(2.5rem, 4vw, 3.4rem);
+    margin-bottom: 24px;
+}
+
+.sobre-nos .historia-texto p {
+    margin: 0 0 18px;
+    line-height: 1.8;
+    font-size: clamp(1rem, 1.4vw, 1.12rem);
+    letter-spacing: 0.01em;
+}
+
+.sobre-nos .foto-funcionario {
+    flex: 1 1 420px;
+    min-width: 280px;
+    max-width: 520px;
+    display: flex;
+    justify-content: center;
+}
+
+.sobre-nos .foto-funcionario img,
+.foto {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+}
+
+.cardapio {
+    background: green;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    padding: 80px 20px;
+    margin-bottom: 0;
+}
+
+.cardapio-introducao {
+    padding: 40px 24px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    max-width: 760px;
+    width: 100%;
+}
+
+.cardapio-introducao h1 {
+    font-size: 8vh;
+    margin: 0;
+}
+
+.div-cardapio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: stretch;
+    gap: 24px;
+    padding: 0 10px;
+    max-width: 1180px;
+    width: 100%;
+}
+
+.cardapio-itens {
+    background-color: rgba(11, 31, 54, 0.5);
+    border: 10px solid darkgreen;
+    border-radius: 12px;
+    padding: 3%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.cardapio-itens h2 {
+    margin: 0;
+    font-size: 1.75rem;
+}
+
+.cardapio img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    border: 4px solid rgba(19, 74, 19, 0.8);
+}
+
+.cardapio-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.cardapio-lista li {
+    font-size: 1rem;
+    color: #e8f0e8;
+}
+
+.pedido {
+    background: #1b1b1b;
+    padding: 50px 20px;
+}
+
+.pedido-conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.pedido-texto {
+    flex: 1 1 380px;
+    min-width: 280px;
+    max-width: 520px;
+    text-align: left;
+}
+
+.pedido-texto h1 {
+    font-size: clamp(2.4rem, 4vw, 3.2rem);
+    margin-bottom: 18px;
+}
+
+.pedido-texto p {
+    font-size: clamp(1rem, 1.4vw, 1.15rem);
+    margin-bottom: 28px;
+    line-height: 1.85;
+    color: #ddd;
+}
+
+.pedido-texto .contato-botao {
+    justify-content: flex-start;
+}
+
+.pedido-visual {
+    flex: 1 1 380px;
+    min-width: 280px;
+    max-width: 520px;
+}
+
+.pedido-visual img,
+.ifood {
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+}
+
+.contato {
+    background-color: #333;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.contato div {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.contato ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 26px;
+    padding: 0;
+}
+
+.contato li {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 16px 20px;
+    min-width: 180px;
+    max-width: 260px;
+    line-height: 1.6;
+    color: #f0f0f0;
+    display: flex;
+    align-items: center;
+}
+
+.possuimos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    border-top: 1px solid #555;
+    border-bottom: 1px solid #555;
+    font-size: 18px;
+}
+
+.possuimos li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 16px;
+    padding: 12px 18px;
+}
+
+footer {
+    background-color: #333;
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid #555;
+}
+
+.libre-baskerville {
+    font-family: "Libre Baskerville", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.imagens{
+    display: flex;
+}
+.ifood{
+    width: 50%;
+    height: auto;
+    margin-top: 0;
+}
+
+/* Media Queries para dispositivos móveis e desktop */
+
+/* Para celulares médios (até 576px) */
+@media (max-width: 576px) {
+    .container-header {
+        flex-direction: column;
+        gap: 12px;
+        padding: 12px;
+    }
+
+    nav ul {
+        gap: 12px;
+        justify-content: center;
+        font-size: 14px;
+    }
+
+    .inicio {
+        padding: 30px 16px;
+    }
+
+    .boas-vindas {
+        gap: 20px;
+    }
+
+    .texto-inicio h1 {
+        font-size: 2rem;
+    }
+
+    .texto-inicio p {
+        font-size: 1rem;
+    }
+
+    .imagem-inicio {
+        width: min(400px, 100%);
+    }
+
+    .sobre-nos {
+        padding: 40px 16px;
+    }
+
+    .sobre-nos .historia {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sobre-nos .historia-texto,
+    .sobre-nos .foto-funcionario {
+        max-width: 100%;
+    }
+
+    .sobre-nos .historia-texto h2 {
+        font-size: 2rem;
+    }
+
+    .cardapio {
+        padding: 30px 16px;
+    }
+
+    .cardapio-introducao h1 {
+        font-size: 2.5rem;
+    }
+
+    .cardapio-introducao p {
+        font-size: 1rem;
+    }
+
+    .div-cardapio {
+        gap: 12px;
+    }
+
+    .cardapio-itens {
+        width: 100%;
+        max-width: 280px;
+        padding: 16px;
+    }
+
+    .cardapio-itens h2 {
+        font-size: 1.5rem;
+    }
+
+    .cardapio-lista li {
+        font-size: 0.9rem;
+    }
+
+    .pedido {
+        padding: 30px 16px;
+    }
+
+    .pedido-conteudo {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .pedido-texto,
+    .pedido-visual {
+        max-width: 100%;
+    }
+
+    .pedido-texto h1 {
+        font-size: 2rem;
+    }
+
+    .pedido-texto p {
+        font-size: 1rem;
+    }
+
+    .contato {
+        padding: 40px 16px;
+    }
+
+    .contato ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .contato li {
+        padding: 12px 16px;
+        min-width: auto;
+        max-width: 100%;
+    }
+
+    .possuimos {
+        gap: 10px;
+        padding: 20px 16px;
+        font-size: 14px;
+    }
+
+    .possuimos li {
+        padding: 8px 12px;
+    }
+
+    footer {
+        padding: 16px;
+    }
+}
+
+/* Para desktop (acima de 577px) */
+@media (min-width: 577px) {
+    .container-header {
+        padding: 20px 40px;
+    }
+
+    .inicio {
+        padding: 100px 40px;
+    }
+
+    .boas-vindas {
+        gap: 60px;
+    }
+
+    .sobre-nos {
+        padding: 80px 40px;
+    }
+
+    .sobre-nos .historia {
+        gap: 60px;
+    }
+
+    .cardapio {
+        padding: 100px 40px;
+    }
+
+    .div-cardapio {
+        gap: 32px;
+    }
+
+    .pedido {
+        padding: 80px 40px;
+    }
+
+    .pedido-conteudo {
+        gap: 60px;
+    }
+
+    .contato {
+        padding: 80px 40px;
+    }
+
+    .possuimos {
+        gap: 24px;
+        padding: 60px 40px;
+    }
+}

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cullinari | Pizzaria e Culinária Artesanal</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap"
+    rel="stylesheet">
+
+  <!-- Estilos mínimos: são as classes dos exemplos oficiais do Bootstrap (card-cover, text-shadow-1)
+       que NÃO vêm no bootstrap.min.css, mais a fonte e a rolagem suave. -->
+  <style>
+    :root {
+      --bs-body-font-family: "Libre Baskerville", serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    .card-cover {
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      min-height: 30rem;
+    }
+
+    .text-shadow-1 {
+      text-shadow: 0 .125rem .25rem rgba(0, 0, 0, .35);
+    }
+
+    .bg-sobrenos {
+      background: #333;
+      color: white !important;
+    }
+
+    .bg-cardapio {
+      background: green;
+      color: white;
+    }
+
+    .bg-pedido {
+      background: #1b1b1b;
+      color: white;
+    }
+
+    .bg-contato{
+      background: #333;
+      color: white;
+    }
+
+    footer{
+      background: #333;
+      color: white;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="p-3 text-bg-dark sticky-top shadow">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="#inicio" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+          <i class="fa-solid fa-pizza-slice fs-3 me-2 text-danger"></i>
+          <h1 class="h3 mb-0 me-lg-4">Cullinari</h1>
+        </a>
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="#inicio" class="nav-link px-2 text-white">Início</a></li>
+          <li><a href="#sobre-nos" class="nav-link px-2 text-white">Sobre Nós</a></li>
+          <li><a href="#cardapio" class="nav-link px-2 text-white">Cardápio</a></li>
+          <li><a href="#contato" class="nav-link px-2 text-white">Contato</a></li>
+        </ul>
+        <div class="text-end">
+          <a href="login.html" class="btn btn-outline-light me-2">Login</a>
+          <a href="login.html" class="btn btn-outline-danger me-2">Sign-up</a>
+          <a href="https://wa.me/551112345678" target="_blank" rel="noopener" class="btn btn-outline-success">
+            <i class="fa-brands fa-whatsapp"></i> Peça pelo WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= CARROSSEL ================= -->
+    <div id="inicio" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#inicio" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#inicio" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#inicio" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+      <div class="carousel-inner">
+
+        <!-- Slide 1: pizza (SVG + imagem) -->
+        <div class="carousel-item active" style="height: 36rem;">
+          <svg class="bd-placeholder-img position-absolute top-0 start-0 w-100 h-100" role="img"
+            aria-label="Pizza Margherita" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100%" height="100%" fill="#be0000"></rect>
+            <image href="assets/img/marguerita.png" x="30%" width="70%" height="100%"
+              preserveAspectRatio="xMidYMid meet"></image>
+          </svg>
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h2 class="display-4 fw-bold">Bem-vindo à Cullinari</h2>
+              <p class="opacity-75">Tradição, qualidade e sabor em cada prato! Um toque de amor em cada detalhe.</p>
+              <p>
+                <a class="btn btn-lg btn-success" href="https://wa.me/551112345678" target="_blank" rel="noopener">
+                  <i class="fa-brands fa-whatsapp"></i> Peça pelo WhatsApp
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item" style="height: 36rem;">
+          <svg class="bd-placeholder-img position-absolute top-0 start-0 w-100 h-100" aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg">
+            <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+            <image href="assets/img/Pizza.jpg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"></image>
+            <rect width="100%" height="100%" fill="#000" fill-opacity=".55"></rect>
+          </svg>
+          <div class="container">
+            <div class="carousel-caption">
+              <h2 class="display-4 fw-bold">Cardápio</h2>
+              <p>Confira nossos pratos e bebidas!</p>
+              <p><a class="btn btn-lg btn-danger" href="#cardapio">Ver cardápio</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item" style="height: 36rem;">
+          <svg class="bd-placeholder-img position-absolute top-0 start-0 w-100 h-100" aria-hidden="true"
+            xmlns="http://www.w3.org/2000/svg">
+            <rect width="100%" height="100%" fill="var(--bs-secondary-color)"></rect>
+            <image href="assets/img/massas.jpg" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"></image>
+            <rect width="100%" height="100%" fill="#000" fill-opacity=".55"></rect>
+          </svg>
+          <div class="container">
+            <div class="carousel-caption text-end">
+              <h2 class="display-4 fw-bold">Tradição e inovação</h2>
+              <p>Um cardápio que combina o clássico e o novo, para uma experiência gastronômica única.</p>
+              <p>
+                <a class="btn btn-lg btn-success" href="https://wa.me/551112345678" target="_blank" rel="noopener">
+                  <i class="fa-brands fa-whatsapp"></i> Peça pelo WhatsApp
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#inicio" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#inicio" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Próximo</span>
+      </button>
+    </div>
+
+    <!-- ================= NOSSA HISTÓRIA ================= -->
+    <div class="bg-sobrenos" style="color: white;">
+      <div id="sobre-nos" class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img src="assets/img/pizzaiolo-removebg-preview.png" class="d-block mx-lg-auto img-fluid rounded-4"
+              alt="Imagem de um funcionário pizzaiolo servindo uma pizza que está pronta" width="700" height="500"
+              loading="lazy" />
+          </div>
+          <div class="col-lg-6">
+            <h2 class="display-5 fw-bold lh-1 mb-3">Nossa História</h2>
+            <p class="lead">Fundada em 2020, a Cullinari nasceu do sonho de criar um espaço onde a paixão pela culinária
+              se transformasse em experiências gastronômicas inesquecíveis. Com uma equipe dedicada e ingredientes
+              frescos, buscamos oferecer pratos que encantam o paladar e aquecem o coração.</p>
+            <p class="lead">Atualmente, a Cullinari conta com uma equipe de profissionais altamente qualificados e um
+              cardápio que combina tradição e inovação, garantindo uma experiência gastronômica única para cada
+              cliente.</p>
+            <p class="lead">Venha nos visitar e descubra o sabor da verdadeira culinária artesanal!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= CARDÁPIO (custom cards) ================= -->
+
+    <div class="bg-cardapio" style="color: white;">
+      <div class="container px-4 py-5" id="cardapio">
+        <h2 class="pb-2 border-bottom display-6 fw-bold">Cardápio</h2>
+        <p class="lead mt-3">Confira nossos pratos e bebidas!</p>
+
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-4">
+
+          <!-- Pizzas -->
+          <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+              style="background-image: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.8)), url('assets/img/Pizza.jpg');">
+              <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                <h3 class="mb-4 display-6 lh-1 fw-bold">Pizzas</h3>
+                <ul class="list-unstyled">
+                  <li class="d-flex justify-content-between border-bottom border-light border-opacity-25 py-2">
+                    <span>Pizza
+                      Margherita</span><strong>R$ 35,00</strong>
+                  </li>
+                  <li class="d-flex justify-content-between border-bottom border-light border-opacity-25 py-2">
+                    <span>Pizza
+                      Pepperoni</span><strong>R$ 40,00</strong>
+                  </li>
+                  <li class="d-flex justify-content-between py-2"><span>Pizza Vegetariana</span><strong>R$
+                      38,00</strong>
+                  </li>
+                </ul>
+                <ul class="d-flex list-unstyled mt-auto align-items-center">
+                  <li class="me-auto">
+                    <a href="https://wa.me/551112345678" target="_blank" rel="noopener"
+                      class="btn btn-sm btn-success rounded-pill"><i class="fa-brands fa-whatsapp"></i> Pedir</a>
+                  </li>
+                  <li class="d-flex align-items-center"><i class="fa-solid fa-tag me-2"></i><small>3 opções</small></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pizzas Especiais -->
+          <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+              style="background-image: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.8)), url('assets/img/pizzas-doces.jpg');">
+              <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                <h3 class="mb-4 display-6 lh-1 fw-bold">Pizzas Especiais</h3>
+                <ul class="list-unstyled">
+                  <li class="d-flex justify-content-between gap-3 border-bottom border-light border-opacity-25 py-2">
+                    <span>Pizza Doce de Chocolate</span><strong class="text-nowrap">R$ 42,00</strong>
+                  </li>
+                  <li class="d-flex justify-content-between gap-3 border-bottom border-light border-opacity-25 py-2">
+                    <span>Pizza de Doce de Leite</span><strong class="text-nowrap">R$ 45,00</strong>
+                  </li>
+                  <li class="d-flex justify-content-between gap-3 py-2"><span>Pizza de Nutella</span><strong
+                      class="text-nowrap">R$ 45,00</strong></li>
+                </ul>
+                <ul class="d-flex list-unstyled mt-auto align-items-center">
+                  <li class="me-auto">
+                    <a href="https://wa.me/551112345678" target="_blank" rel="noopener"
+                      class="btn btn-sm btn-success rounded-pill"><i class="fa-brands fa-whatsapp"></i> Pedir</a>
+                  </li>
+                  <li class="d-flex align-items-center"><i class="fa-solid fa-tag me-2"></i><small>3 opções</small></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Massas -->
+          <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+              style="background-image: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.8)), url('assets/img/massas.jpg');">
+              <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                <h3 class="mb-4 display-6 lh-1 fw-bold">Massas</h3>
+                <ul class="list-unstyled">
+                  <li class="d-flex justify-content-between gap-3 border-bottom border-light border-opacity-25 py-2">
+                    <span>Spaghetti à Carbonara</span><strong class="text-nowrap">R$ 30,00</strong>
+                  </li>
+                  <li class="d-flex justify-content-between gap-3 border-bottom border-light border-opacity-25 py-2">
+                    <span>Penne à Arrabbiata</span><strong class="text-nowrap">R$ 32,00</strong>
+                  </li>
+                  <li class="d-flex justify-content-between gap-3 py-2"><span>Lasanha à Bolonhesa</span><strong
+                      class="text-nowrap">R$ 35,00</strong></li>
+                </ul>
+                <ul class="d-flex list-unstyled mt-auto align-items-center">
+                  <li class="me-auto">
+                    <a href="https://wa.me/551112345678" target="_blank" rel="noopener"
+                      class="btn btn-sm btn-success rounded-pill"><i class="fa-brands fa-whatsapp"></i> Pedir</a>
+                  </li>
+                  <li class="d-flex align-items-center"><i class="fa-solid fa-tag me-2"></i><small>3 opções</small></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Saladas -->
+          <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+              style="background-image: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.8)), url('assets/img/saladas.jpg');">
+              <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                <h3 class="mb-4 display-6 lh-1 fw-bold">Saladas</h3>
+                <ul class="list-unstyled">
+                  <li class="d-flex justify-content-between gap-3 border-bottom border-light border-opacity-25 py-2">
+                    <span>Salada Caesar</span><strong class="text-nowrap">R$ 25,00</strong>
+                  </li>
+                  <li class="d-flex justify-content-between gap-3 border-bottom border-light border-opacity-25 py-2">
+                    <span>Salada de Rúcula</span><strong class="text-nowrap">R$ 22,00</strong>
+                  </li>
+                  <li class="d-flex justify-content-between gap-3 py-2"><span>Salada Vegana</span><strong
+                      class="text-nowrap">R$ 28,00</strong></li>
+                </ul>
+                <ul class="d-flex list-unstyled mt-auto align-items-center">
+                  <li class="me-auto">
+                    <a href="https://wa.me/551112345678" target="_blank" rel="noopener"
+                      class="btn btn-sm btn-success rounded-pill"><i class="fa-brands fa-whatsapp"></i> Pedir</a>
+                  </li>
+                  <li class="d-flex align-items-center"><i class="fa-solid fa-tag me-2"></i><small>3 opções</small></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Sobremesas -->
+          <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+              style="background-image: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.8)), url('assets/img/sobremesa.jpg');">
+              <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                <h3 class="mb-4 display-6 lh-1 fw-bold">Sobremesas</h3>
+                <ul class="list-unstyled">
+                  <li class="d-flex justify-content-between gap-3 border-bottom border-light border-opacity-25 py-2">
+                    <span>Tiramisu</span><strong class="text-nowrap">R$ 20,00</strong>
+                  </li>
+                  <li class="d-flex justify-content-between gap-3 border-bottom border-light border-opacity-25 py-2">
+                    <span>Profiteroles</span><strong class="text-nowrap">R$ 18,00</strong>
+                  </li>
+                  <li class="d-flex justify-content-between gap-3 py-2"><span>Pudim</span><strong class="text-nowrap">R$
+                      15,00</strong></li>
+                </ul>
+                <ul class="d-flex list-unstyled mt-auto align-items-center">
+                  <li class="me-auto">
+                    <a href="https://wa.me/551112345678" target="_blank" rel="noopener"
+                      class="btn btn-sm btn-success rounded-pill"><i class="fa-brands fa-whatsapp"></i> Pedir</a>
+                  </li>
+                  <li class="d-flex align-items-center"><i class="fa-solid fa-tag me-2"></i><small>3 opções</small></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bebidas -->
+          <div class="col">
+            <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg"
+              style="background-image: linear-gradient(rgba(0,0,0,.45), rgba(0,0,0,.8)), url('assets/img/bebidas.jpg');">
+              <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                <h3 class="mb-4 display-6 lh-1 fw-bold">Bebidas</h3>
+                <ul class="list-unstyled">
+                  <li class="d-flex justify-content-between gap-3 border-bottom border-light border-opacity-25 py-2">
+                    <span>Refrigerante</span><strong class="text-nowrap">R$ 8,00</strong>
+                  </li>
+                  <li class="d-flex justify-content-between gap-3 border-bottom border-light border-opacity-25 py-2">
+                    <span>Suco Natural</span><strong class="text-nowrap">R$ 12,00</strong>
+                  </li>
+                  <li class="d-flex justify-content-between gap-3 py-2"><span>Água Mineral</span><strong
+                      class="text-nowrap">R$ 5,00</strong></li>
+                </ul>
+                <ul class="d-flex list-unstyled mt-auto align-items-center">
+                  <li class="me-auto">
+                    <a href="https://wa.me/551112345678" target="_blank" rel="noopener"
+                      class="btn btn-sm btn-success rounded-pill"><i class="fa-brands fa-whatsapp"></i> Pedir</a>
+                  </li>
+                  <li class="d-flex align-items-center"><i class="fa-solid fa-tag me-2"></i><small>3 opções</small></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= PEDIDO ================= -->
+    <div class="bg-pedido">
+      <div class="container col-xxl-8 px-4 py-5">
+        <div class="row align-items-center g-5 py-4">
+          <div class="col-lg-6">
+            <h2 class="display-5 fw-bold lh-1 mb-3">Faça seu Pedido Já!</h2>
+            <p class="lead">Faça seu pedido e permita-nos proporcionar uma experiência gastronômica excepcional.</p>
+            <a href="https://wa.me/551112345678" target="_blank" rel="noopener" class="btn btn-success btn-lg">
+              <i class="fa-brands fa-whatsapp"></i> Peça pelo WhatsApp
+            </a>
+          </div>
+          <div class="col-lg-6">
+            <img src="assets/img/ifood-entrega.jpg" class="d-block img-fluid rounded-4 shadow-lg w-100"
+              alt="Entrega do iFood" loading="lazy" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ================= CONTATO ================= -->
+    <div class="bg-contato">
+      <div class="container px-4 py-5" id="contato">
+        <h2 class="pb-2 border-bottom display-6 fw-bold">Contato</h2>
+        <p class="lead mt-3">Entre em contato conosco para fazer seu pedido ou tirar dúvidas!</p>
+        <div class="row row-cols-1 row-cols-md-3 g-4 py-3">
+          <div class="col">
+            <div class="card h-100 text-center rounded-4 p-4">
+              <i class="fa-solid fa-phone fs-2 text-danger mb-3"></i>
+              <h3 class="h6 text-uppercase text-body-secondary">Telefone</h3>
+              <p class="mb-0">(11) 1234-5678</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 text-center rounded-4 p-4">
+              <i class="fa-solid fa-envelope fs-2 text-danger mb-3"></i>
+              <h3 class="h6 text-uppercase text-body-secondary">Email</h3>
+              <p class="mb-0 text-break">contato@cullinari.com.br</p>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card h-100 text-center rounded-4 p-4">
+              <i class="fa-solid fa-location-dot fs-2 text-danger mb-3"></i>
+              <h3 class="h6 text-uppercase text-body-secondary">Endereço</h3>
+              <p class="mb-0">Rua das Flores, 123 - São Paulo, SP</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer class="border-top">
+    <div class="container">
+      <div class="py-5">
+        <div class="row">
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Navegação</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#inicio" class="nav-link p-0 text-white">Início</a></li>
+              <li class="nav-item mb-2"><a href="#sobre-nos" class="nav-link p-0 text-white">Sobre Nós</a></li>
+              <li class="nav-item mb-2"><a href="#cardapio" class="nav-link p-0 text-white">Cardápio</a></li>
+              <li class="nav-item mb-2"><a href="#contato" class="nav-link p-0 text-white">Contato</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Cardápio</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="#cardapio" class="nav-link p-0 text-white">Pizzas</a></li>
+              <li class="nav-item mb-2"><a href="#cardapio" class="nav-link p-0 text-white">Massas</a></li>
+              <li class="nav-item mb-2"><a href="#cardapio" class="nav-link p-0 text-white">Saladas</a></li>
+              <li class="nav-item mb-2"><a href="#cardapio" class="nav-link p-0 text-white">Sobremesas</a></li>
+              <li class="nav-item mb-2"><a href="#cardapio" class="nav-link p-0 text-white">Bebidas</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-2 mb-3">
+            <h5>Pedidos</h5>
+            <ul class="nav flex-column">
+              <li class="nav-item mb-2"><a href="https://wa.me/551112345678"
+                  class="nav-link p-0 text-white">WhatsApp</a></li>
+              <li class="nav-item mb-2"><a href="login.html" class="nav-link p-0 text-white">Login</a></li>
+              <li class="nav-item mb-2"><a href="login.html" class="nav-link p-0 text-white">Sign-up</a></li>
+            </ul>
+          </div>
+          <div class="col-md-5 offset-md-1 mb-3">
+            <form>
+              <h5>Quer entrar em contato conosco por algum outro motivo?</h5>
+              <p>Aqui na Cullinari fazemos aluguéis do espaço para festas e outras ocasiões!</p>
+              <div class="flex-column flex-sm-row w-100 gap-2">
+                <input id="newsletter1" type="name" class="form-control" placeholder="Seu nome"/><br>
+                <input id="newsletter1" type="number" class="form-control" placeholder="Seu número de telefone"/><br>
+                <button class="btn btn-primary" type="button">Contatar</button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+          <p class="mb-0">&copy; 2020 Cullinari - Todos os direitos reservados</p>
+          <ul class="list-unstyled d-flex mb-0">
+            <li class="ms-3"><a class="link-body-emphasis fs-4" href="#" aria-label="Instagram"><i
+                  class="fa-brands fa-instagram"></i></a></li>
+            <li class="ms-3"><a class="link-body-emphasis fs-4" href="#" aria-label="Facebook"><i
+                  class="fa-brands fa-facebook"></i></a></li>
+            <li class="ms-3"><a class="link-body-emphasis fs-4" href="https://wa.me/551112345678"
+                aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
